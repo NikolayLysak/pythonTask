@@ -3,3 +3,4 @@ jsons
 pytest
 requests
 allure-pytest
+flake8
