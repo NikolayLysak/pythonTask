@@ -1,0 +1,15 @@
+{'activity': 'Take your cat on a walk', 'type': 'relaxation', 'participants': 1, 'price': 0.02, 'link': '', 'key': '5940465', 'accessibility': 0.1}
+{'activity': 'Patronize a local independent restaurant', 'type': 'recreational', 'participants': 1, 'price': 0.2, 'link': '', 'key': '5319204', 'accessibility': 0.1}
+{'activity': 'Draw and color a Mandala', 'type': 'relaxation', 'participants': 1, 'price': 0.05, 'link': 'https://en.wikipedia.org/wiki/Mandala', 'key': '4614092', 'accessibility': 0.1}
+{'activity': 'Teach your dog a new trick', 'type': 'relaxation', 'participants': 1, 'price': 0.05, 'link': '', 'key': '1668223', 'accessibility': 0.15}
+{'activity': 'Make homemade ice cream', 'type': 'cooking', 'participants': 1, 'price': 0.2, 'link': '', 'key': '3818400', 'accessibility': 0.2}
+{'activity': 'Go to the library and find an interesting book', 'type': 'relaxation', 'participants': 1, 'price': 0.05, 'link': '', 'key': '8253550', 'accessibility': 0.2}
+{'activity': 'Prepare a dish from a foreign culture', 'type': 'cooking', 'participants': 1, 'price': 0.2, 'link': '', 'key': '8061754', 'accessibility': 0.3}
+{'activity': 'Have a jam session with your friends', 'type': 'music', 'participants': 5, 'price': 0.1, 'link': '', 'key': '2715253', 'accessibility': 0.3}
+{'activity': 'Buy a new house decoration', 'type': 'recreational', 'participants': 1, 'price': 0.4, 'link': '', 'key': '3456114', 'accessibility': 0.3}
+{'activity': 'Learn woodworking', 'type': 'diy', 'participants': 1, 'price': 0.3, 'link': '', 'key': '9216391', 'accessibility': 0.3}
+{'activity': 'Learn how to make a website', 'type': 'education', 'participants': 1, 'price': 0.1, 'link': '', 'key': '9924423', 'accessibility': 0.3}
+{'activity': 'Start a garden', 'type': 'recreational', 'participants': 1, 'price': 0.3, 'link': '', 'key': '1934228', 'accessibility': 0.35}
+{'activity': 'Learn the Chinese erhu', 'type': 'music', 'participants': 1, 'price': 0.6, 'link': '', 'key': '2742452', 'accessibility': 0.4}
+{'activity': 'Do something you used to do as a kid', 'type': 'relaxation', 'participants': 1, 'price': 0.1, 'link': '', 'key': '8827573', 'accessibility': 0.8}
+{'activity': 'Do something you used to do as a kid', 'type': 'relaxation', 'participants': 1, 'price': 0.1, 'link': '', 'key': '8827573', 'accessibility': 0.8}

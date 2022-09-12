@@ -1,0 +1,5 @@
+jsonpath
+jsons
+pytest
+requests
+allure-pytest
