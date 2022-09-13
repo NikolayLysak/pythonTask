@@ -1,33 +1,38 @@
+import configparser
+
 import allure
+import pytest
 
 from API_task.src.utils.helper import Helper
 from API_task.src.utils.request_data_from_service import API
 
-h = Helper()
-api = API()
+
+@pytest.fixture(scope="session")
+def prepare_test_data():
+    config = configparser.ConfigParser()
+    config.read("../../../Config/config.cfg")
+    url = config.get("Mocked", "url")
+    response = API(url).get_list_of_activities_from_service()
+    print("\nThe response has been received successfully")
+    yield response
+    print("\nTear down test")
 
 
 @allure.parent_suite("API")
 @allure.suite("Mocked API")
 @allure.title("Sorted API response")
-def test_api_response_filtering():
-    # Get data from service:
-    with allure.step("Get data from service"):
-        response = api.get_request(h.base_url)
-
+def test_api_response_filtering(prepare_test_data):
     # Get filtered data:
     with allure.step("Get filtered data"):
-        filtered_resp = h.filter("price", 0, h.parse_json(response))
+        assert len(prepare_test_data) != 0
+        filtered_resp = Helper.filter_entries_by_price(0, Helper.parse_to_list_of_objects(prepare_test_data))
+        # assert filtered_resp.
 
     # Sort response filtered data:
     with allure.step("Sort response filtered data"):
-        h.sort_by(filtered_resp, "accessibility")
+        Helper.sort_entries_by_accessibility(filtered_resp)
 
-    accessibility = 0
-
-    # Check results:
-    with allure.step("Check results"):
-        for resp_item in filtered_resp:
-            assert resp_item.get("price") != 0
-            assert resp_item.get("accessibility") >= accessibility
-            accessibility = resp_item.get("accessibility")
+    with allure.step("Sort response filtered data"):
+        print("\n")
+        for entry in filtered_resp:
+            print(entry.activity, entry.accessibility)

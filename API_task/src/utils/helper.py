@@ -1,23 +1,34 @@
 import json
+from typing import List
+
+from pydantic.main import BaseModel
+
+
+class Activity(BaseModel):
+    activity: str
+    type: str
+    participants: int
+    price: float
+    link: str
+    key: int
+    accessibility: float
 
 
 class Helper:
-    base_url = "https://587ec89e-2eb8-41a0-b858-5d9cfdc428ba.mock.pstmn.io/api/activity"
 
-    # Parse string to JSON
-    def parse_json(self, data: str) -> list:
-        return json.loads(data)
+    # Parse string to list of Objects:
+    @staticmethod
+    def parse_to_list_of_objects(response_data: str) -> List[Activity]:
+        response = list(map(lambda obj: Activity(**obj), json.loads(response_data)))
+        return response
 
-    # Sort data by key
-    def sort_by(self, unsorted_list: list, key_name: str, descending=False) -> None:
-        unsorted_list.sort(key=lambda obj: obj.get(key_name), reverse=descending)
+    # Sort data by accessibility
+    @staticmethod
+    def sort_entries_by_accessibility(unsorted_list: List[Activity], descending=False) -> None:
+        unsorted_list.sort(key=lambda obj: obj.accessibility, reverse=descending)
 
     # Filter response data by price volume
-    def filter(self, key: str, volume: float, resp: list) -> list:
-        filtered_resp = []
-
-        for resp_item in resp:
-            if resp_item.get('price') > 0:
-                filtered_resp.append(resp_item)
-
+    @staticmethod
+    def filter_entries_by_price(volume: float, response: List[Activity]) -> List[Activity]:
+        filtered_resp = list(filter(lambda x: (x.price > volume), response))
         return filtered_resp

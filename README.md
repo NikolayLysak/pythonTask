@@ -30,7 +30,7 @@
 ---
 
 ## Description
-#### PyTest was chosen as the working framework. Also, the 'Jsons' and 'Requests' tools were used for the task
+#### PyTest was chosen as the working framework.
 #### A complete list of installed packages can be found in 'requirements.txt'
 ~~~
  './requirements.txt'
@@ -61,12 +61,13 @@
 ## Run tests:
 ### To run the tests, please use the console command below
 ~~~
-pytest --alluredir=allure_results
+cd API_task/src/tests
+pytest --alluredir=../../../allure_results
 ~~~
 #### If you want to change the storage location of the Allure report data - change the value of the key *"--alluredir"* by specifying the path to the new location of the report folder
 ####
 ### To generate a report, run the console command.
 ###### _(If the path to the report folder has been changed - specify a new path to the report data storage folder)_
 ~~~
-allure serve allure_results
+allure serve ../../../allure_results
 ~~~
