@@ -42,13 +42,14 @@
 > |_API_task
 > | |_src
 > |   |_tests
-> |     | sort_api_response_test.py
+> |     | sort_api_response_test.py (Contains the test method)
 > |   |_utils
-> |     | helper.py
-> |     | request_data_from_service.py
+> |     | helper.py (Contains methods for interacting and processing data )
+> |     | request_data_from_service.py (Contains a method for sending a request to a remote service)
 > |
-> |_FE_mobile_task
->   |_
+> |_Config 
+>   |_config.cfg (Contains the project configuration)
+>   |_config_reader.py (Methods for transferring configuration data to test methods)
 > ~~~
 > 
 > #### *To install all the necessary dependencies, run the console command before starting the project:* 
