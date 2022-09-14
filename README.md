@@ -37,7 +37,7 @@
 ~~~
 > #### *The project is divided into two modules:*
 > - API_task
-> - FE_mobile_task
+> - FE_mobile_task (not implemented yet)
 > ~~~
 > |_API_task
 > | |_src
