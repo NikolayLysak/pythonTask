@@ -59,9 +59,12 @@
 > ~~~
 ---
 ## Run tests:
-### To run the tests, please use the console command below
+### Go to the folder with the test class: 
 ~~~
 cd API_task/src/tests
+~~~
+### To run the tests, please use the console command below:
+~~~
 pytest --alluredir=../../../allure_results
 ~~~
 #### If you want to change the storage location of the Allure report data - change the value of the key *"--alluredir"* by specifying the path to the new location of the report folder
