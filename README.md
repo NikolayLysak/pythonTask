@@ -49,8 +49,6 @@
 > |
 > |_FE_mobile_task
 >   |_
->   |_
->   |_
 > ~~~
 > 
 > #### *To install all the necessary dependencies, run the console command before starting the project:* 
