@@ -22,17 +22,18 @@ def prepare_test_data():
 @allure.suite("Mocked API")
 @allure.title("Sorted API response")
 def test_api_response_filtering(prepare_test_data):
-    # Get filtered data:
-    with allure.step("Get filtered data"):
+    # Filtering data by price:
+    with allure.step("Filtering data by price"):
         assert len(prepare_test_data) != 0
         filtered_resp = Helper.filter_entries_by_price(0, Helper.parse_to_list_of_objects(prepare_test_data))
         # assert filtered_resp.
 
-    # Sort response filtered data:
-    with allure.step("Sort response filtered data"):
+    # Sort data by accessibility in ascending order:
+    with allure.step("Sort data by accessibility in ascending order"):
         Helper.sort_entries_by_accessibility(filtered_resp)
 
-    with allure.step("Sort response filtered data"):
+    # Output the result to the console:
+    with allure.step("Output the result to the console"):
         print("\n")
         for entry in filtered_resp:
             print(entry.activity, entry.accessibility)
